@@ -1,7 +1,7 @@
 
 # Mood-Based Movie Recommendation Ad 🎬😄
 
-This is a 300x600px display ad built using **React**, **TypeScript**, **Vite**, and **plain CSS** (no Tailwind), which uses the user's **camera** to detect their **mood** and recommend a **movie** accordingly. It also integrates the **OpenAI API** for mood detection from a captured face image.
+This is a 300x600px display ad built using **React**, **TypeScript**, **Vite**, and a combination of **Tailwind CSS** and **custom plain CSS**, which uses the user's **camera** to detect their **mood** and recommend a **movie** accordingly. It integrates the **OpenAI API** for mood detection from a captured face image and provides a smooth animation experience with **GSAP**.
 
 ## 🔮 Features
 
