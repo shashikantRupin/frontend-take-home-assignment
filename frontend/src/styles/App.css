@@ -1,0 +1,157 @@
+/* Base styles for the ad container */
+:root {
+  --primary-color: #00a8ff;
+  --secondary-color: #8e44ad;
+  --background-color: #0d1117;
+  --text-color: #ffffff;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --transition-time: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+}
+
+.ad-container {
+  width: 300px;
+  height: 600px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+}
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-time) ease;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 12px 20px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 168, 255, 0.3);
+  transition: all var(--transition-time) ease;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 168, 255, 0.4);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 168, 255, 0.3);
+}
+
+.primary-button.disabled {
+  background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 10px 20px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-time) ease;
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.error-message {
+  color: var(--error-color);
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Loading animation */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Transitions between sections */
+.ad-container > div {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
