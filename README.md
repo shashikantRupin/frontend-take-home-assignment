@@ -17,7 +17,6 @@ This is a 300x600px display ad built using **React**, **TypeScript**, **Vite**, 
 - React
 - TypeScript
 - Vite
-- Plain CSS
 - OpenAI API
 - GSAP (for animations)
 - HTML5 Video and Canvas APIs
